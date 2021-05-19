@@ -8,3 +8,5 @@ src/js/env.js
 src/js/env 
 env.js 
 env
+.data
+src/js/data/
