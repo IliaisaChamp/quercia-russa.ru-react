@@ -10,7 +10,7 @@ const schema = yup.object().shape({
   name: yup.string().matches(nameRegExp, 'Напишите ваше имя пожалуйста'),
   phone: yup
     .string()
-    .matches(phoneRegExp, 'Пожалуйста проверьте номер телефона'),
+    .matches(phoneRegExp, 'Пожалуйста, проверьте номер телефона'),
 });
 
 export default schema;

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import shuffle from 'lodash/shuffle';
 
 export default function ProductSlider({ images, path }) {
   const mappingImages = (data) => {
-    return data.slice(1).map((img, id) => {
+    const resData = shuffle(data.slice(1));
+    return resData.map((img, id) => {
       return (
         <div
           key={id + 1}
@@ -13,7 +15,7 @@ export default function ProductSlider({ images, path }) {
           <img
             src={'/img/inzhenernaya-doska/' + img}
             className="d-block w-100 h-100"
-            alt="..."
+            alt="Photo: parquet"
             style={{ objectFit: 'cover' }}
           />
         </div>
@@ -32,7 +34,7 @@ export default function ProductSlider({ images, path }) {
             <img
               src={`/img/${path}/${images[0]}`}
               className="d-block w-100 h-100"
-              alt=""
+              alt="Photo: parquet"
               style={{ objectFit: 'cover' }}
             />
           </div>

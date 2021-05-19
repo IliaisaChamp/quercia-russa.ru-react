@@ -7,22 +7,24 @@ a
     color: #ffffff
 
 .btn-success
-  background: linear-gradient(to right, #49C628, #00c06d)
+  background: linear-gradient(45deg, #49C628, #00c06d)
   border-color: #00c06d
   font-weight: 300
   font-size: 1.25rem
   padding: .7rem 2rem
   color: #ffffff
+  transition: background 2s ease-in-out
   &:hover
-    background: linear-gradient(to left, #49C628, #00c06d)
+    background: linear-gradient(225deg, #49C628, #00c06d)
     border-color: #00c06d
+    background-position: left center
 
 .navbar
   transition: background-color 0.3s ease-in-out
 
 .header
   font-family: "Oswald", sans-serif
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 75%, #000000 100%),url(../assets/img/main.JPG)
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 75%, #000000 100%),url(../assets/img/main.JPG)
   background-position: botoom
   background-repeat: no-repeat
   background-attachment: scroll
@@ -81,8 +83,8 @@ a
 .button-back
   cursor: pointer
   position: fixed
-  bottom: 15px
-  right: 15px
+  bottom: 18px
+  left: 20px
   width: 40px
   height: 40px
   z-index: 999
@@ -93,3 +95,12 @@ a
 .carousel-control-prev-icon, .carousel-control-next-icon
   width: 4rem
   height: 4rem
+
+.fade
+  animation: fadeIn 1s linear
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1

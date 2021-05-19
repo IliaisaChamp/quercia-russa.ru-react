@@ -1,37 +1,24 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import schema from './validate';
 import axios from 'axios';
 import SuccessMessage from './SuccessMessage';
+import Toast from './Toast';
+import env from '../../env';
 
-import { TELEGRAM_KEY, TELEGRAM_CHAT_ID } from '../../env';
-const URL = `https://api.telegram.org/bot${TELEGRAM_KEY}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=`;
-
+const URL = `https://api.telegram.org/bot${env.TELEGRAM_KEY}/sendMessage?chat_id=${env.TELEGRAM_CHAT_ID}&text=`;
 function Form() {
-  const [error, setError] = useState(null);
-  const [nameError, setNameError] = useState('');
-  const [phoneError, setPhoneError] = useState('');
-  const [nameDisplay, setNameDisplay] = useState();
-  const [phoneDisplay, setPhoneDisplay] = useState();
+  const [isToast, setToast] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
   const [isSuccess, setIsSuccess] = useState(null);
-  const [unsuccessfulMessage, setUnsuccessfulMessage] = useState();
-  const isValidateStatus = (status) => status >= 200 && status < 300;
-
-  const onChangeErrors = (err) => {
-    if (err.name) {
-      setNameError(err.message);
-      setNameDisplay({ display: 'block', color: 'red' });
-    }
-    if (err.phone) {
-      setPhoneError(err.message);
-      setPhoneDisplay({ display: 'block', color: 'red' });
-    }
-    setUnsuccessfulMessage('ошибка сети');
-  };
+  // const [unsuccessfulMessage, setUnsuccessfulMessage] = useState();
+  // const isValidateStatus = (status) => status >= 200 && status < 300;
 
   const callback = useCallback(async () => {
     const form = document.querySelector('.form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      setToast(false);
       const fomData = new FormData(form);
       const name = fomData.get('name');
       const phone = fomData.get('phone');
@@ -41,15 +28,14 @@ function Form() {
         await schema.validate({ name: name, phone: phone });
         // const response = await axios.get(URL + message);
         // isValidateStatus(response.status)
-        //   ? setisSuccess(
-        //       'Ваше сообщение успешно отправлено, мы скоро вам перезвоним'
-        //     )
-        //   : false;
+        //   ? setisSuccess(true)
+        //   : setisSuccess(false);
         // form.reset();
         setIsSuccess(true);
       } catch (error) {
         if (error) {
-          onChangeErrors(error);
+          setErrorMessage(error.message);
+          setToast(true);
         }
       }
     });
@@ -72,7 +58,6 @@ function Form() {
               className="form-control mx-auto fw-light rounded-0"
               placeholder="Ваше имя"
             />
-            <span style={nameDisplay}>{nameError}</span>
           </div>
           <div className="mb-4" style={{ height: 50 + 'px' }}>
             <input
@@ -81,7 +66,6 @@ function Form() {
               className="form-control mx-auto fw-light rounded-0"
               placeholder="Телефон"
             />
-            <span style={phoneDisplay}>{phoneError}</span>
           </div>
           <div className="mb-3">
             <textarea
@@ -100,12 +84,15 @@ function Form() {
               Отправить
             </button>
           </div>
+          {isToast ? <Toast message={errorMessage} isToast={isToast} /> : null}
         </form>
       )}
     </>
   );
 }
 
-Form.propTypes = {};
+Form.propTypes = {
+  updateToast: PropTypes.func,
+};
 
 export default Form;
