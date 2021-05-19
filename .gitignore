@@ -1,0 +1,10 @@
+/node_modules/  
+node_modules 
+*.log 
+coverage
+dist
+assets
+src/js/env.js
+src/js/env 
+env.js 
+env
