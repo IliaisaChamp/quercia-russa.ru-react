@@ -47,10 +47,13 @@ export default function Footer() {
               style={{ width: 20 + 'rem' }}
             >
               <div className="card-body text-center p-3">
-                <h5 className="card-title text-white">Контакты:</h5>
+                <h5 className="card-title text-white">Телефоны:</h5>
                 <div className="line mx-auto"></div>
                 <p className="card-text fs-6 footer-card__text ">
                   <a href="tel:79160661932">+7 916 066-19-32</a>
+                </p>
+                <p className="card-text fs-6 footer-card__text ">
+                  <a href="tel:79160661932">+7 905 577-81-71</a>
                 </p>
                 <p className="card-text fs-6 footer-card__text ">
                   <a href="tel:79162865998">+7 916 286-59-98</a>
