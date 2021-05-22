@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from './Slider';
 
-function Factory() {
+function Factory({ data }) {
+  const { images } = data;
   return (
     <>
       <section className="factory" id="factory">
@@ -18,7 +19,7 @@ function Factory() {
                 бережно соблюдая технологии.
               </p>
             </div>
-            <Slider />
+            <Slider images={images} />
           </div>
         </div>
       </section>
@@ -27,7 +28,7 @@ function Factory() {
 }
 
 Factory.propTypes = {
-  props: PropTypes.array,
+  data: PropTypes.object,
 };
 
 export default Factory;

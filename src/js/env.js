@@ -1,4 +1,0 @@
-export default {
-  TELEGRAM_KEY: '1799212436:AAHcHhlVemy7cQCEol58SuSp3rAGqe1n1Nc',
-  TELEGRAM_CHAT_ID: '-562714256',
-};

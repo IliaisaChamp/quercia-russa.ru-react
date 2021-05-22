@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import schema from './validate';
 import axios from 'axios';
+import schema from './validate';
 import SuccessMessage from './SuccessMessage';
 import Toast from './Toast';
-import env from '../../env';
+import keys from '../../keys';
 
-const URL = `https://api.telegram.org/bot${env.TELEGRAM_KEY}/sendMessage?chat_id=${env.TELEGRAM_CHAT_ID}&text=`;
+const URL = `https://api.telegram.org/bot${keys.TELEGRAM_KEY}/sendMessage?chat_id=${keys.TELEGRAM_CHAT_ID}&text=`;
 function Form() {
   const [isToast, setToast] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);

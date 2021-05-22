@@ -1,7 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Slider() {
+function Slider({ images }) {
+  const mappingSliderImg = (data) => {
+    const images = data.slice(1);
+    return images.map((image, id) => {
+      return (
+        <div key={id + 1} className="carousel-item factory-slider__item">
+          <img
+            src={`/img/factory/${image}`}
+            className="d-block w-100 img-fluid factory-slider__item-img"
+            alt="Photo: factory"
+          />
+        </div>
+      );
+    });
+  };
   return (
     <>
       <div
@@ -11,27 +25,14 @@ function Slider() {
         style={{ maxWidth: 1000 + 'px' }}
       >
         <div className="carousel-inner d-flex">
-          <div className="carousel-item slider-item active">
+          <div className="carousel-item factory-slider__item active">
             <img
-              src="/img/factory_1.jpg"
-              className="d-block w-100 img-fluid slider-img"
-              alt="..."
+              src={`/img/factory/${images[0]}`}
+              className="d-block w-100 img-fluid factory-slider__item-img"
+              alt="Photo: factory"
             />
           </div>
-          <div className="carousel-item slider-item">
-            <img
-              src="/img/factory_2.jpg"
-              className="d-block w-100 img-fluid slider-img"
-              alt="..."
-            />
-          </div>
-          <div className="carousel-item slider-item">
-            <img
-              src="/img/factory_5.jpg"
-              className="d-block  w-100 img-fluid slider-img"
-              alt="..."
-            />
-          </div>
+          {mappingSliderImg(images)}
         </div>
         <button
           className="carousel-control-prev"
@@ -63,7 +64,7 @@ function Slider() {
 }
 
 Slider.propTypes = {
-  props: PropTypes.object,
+  images: PropTypes.array,
 };
 
 export default Slider;

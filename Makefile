@@ -1,17 +1,17 @@
 develop:
-	cross-env NODE_ENV=development npx webpack serve --mode development --open
-
-install:
-	npm ci
+	webpack serve -c config/webpack/dev.js
 
 build:
-	 npm run build
+	 webpack -c config/webpack/prod.js
 
 test:
 	npm test --experimental-vm-modules
 
 lint:
 	npx eslint .
+
+lintfix:
+	npx eslint . --fix
 
 tests:
 	npm test -- --coverage --coverageProvider=v8	

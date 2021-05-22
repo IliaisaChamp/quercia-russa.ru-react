@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import backButton from '../../../assets/icons/arrow.svg';
 
 export default function BackButton() {
   const history = useHistory();
@@ -7,7 +8,7 @@ export default function BackButton() {
   return (
     <>
       <img
-        src="/img/icons/arrow.svg"
+        src={backButton}
         className="button-back"
         onClick={() => history.goBack()}
       ></img>

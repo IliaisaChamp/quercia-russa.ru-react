@@ -1,5 +1,5 @@
 import React from 'react';
-
+import instagram from '../../assets/icons/instagram.svg';
 export default function Footer() {
   return (
     <>
@@ -68,7 +68,7 @@ export default function Footer() {
             <div className="col">
               <a href="https://www.instagram.com/querciarussa.ru/">
                 <img
-                  src="/img/icons/instagram.svg"
+                  src={instagram}
                   className="rounded mx-auto d-block"
                   alt="instagram"
                   style={{ width: 3 + 'rem' }}

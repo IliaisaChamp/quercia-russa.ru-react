@@ -1,0 +1,45 @@
+@media screen and (max-width: 575.98px) {
+  .header {
+    background-position: left;
+  }
+
+  .header-title {
+    font-size: calc(6.5rem + 2.5vw);
+  }
+
+  .header-subtitle {
+    font-size: calc(.7rem + 1.5vw);
+    letter-spacing: 0.3rem;
+  }
+
+  .header-button {
+    padding: 1.5rem;
+    font-size: calc(.55rem + 1.5vw);
+  }
+}
+
+.title-sized {
+  font-size: calc(1rem + 3.5vw)
+}
+
+.slider-container {
+  height: 400px
+}
+
+.slider-item {
+  height: 400px
+}
+
+.slider-img {
+  object-fit: cover;
+  height: 100%;
+
+}
+
+.bg-scroll {
+  background-color: transparent
+}
+
+.navbar-collapse.collapse.show.bg-mobile {
+  background-color: rgba(33, 33, 33, .5)
+}

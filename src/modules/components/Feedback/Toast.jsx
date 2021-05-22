@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import emoji from '../../../assets/icons/emoji-dizzy.svg';
 
 function Toast({ message, isToast }) {
   const [show, setShow] = useState(isToast ?? false);
@@ -16,11 +17,7 @@ function Toast({ message, isToast }) {
           style={{ width: 'auto' }}
         >
           <div className="toast-header justify-content-between">
-            <img
-              src="/img/icons/emoji-dizzy.svg"
-              className="rounded me-2"
-              alt="emoji: dizzy"
-            />
+            <img src={emoji} className="rounded me-2" alt="emoji: dizzy" />
             <button
               type="button"
               className="btn-close"

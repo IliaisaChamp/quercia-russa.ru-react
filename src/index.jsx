@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap';
-import '../styles/index.sass';
+import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/scss/bootstrap';
+import './styles/index.scss';
 import App from './App';
 
 ReactDOM.render(
@@ -11,4 +14,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-module.hot.accept();
+// module.hot.accept();
