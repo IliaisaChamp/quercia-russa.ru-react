@@ -1,35 +1,29 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "env": {
+        "browser": true,
+        "es2021": true
     },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "babel", "jest", "prettier"],
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "no-console": "off",
-    "no-underscore-dangle": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto",
-        "singleQuote": true,
-        "printWidth": 80
-      }
-    ]
-  }
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false},{"packageDir": "./"}],
+      "no-use-before-define": "off", 
+      "max-len": ["warn", {"code": 140}],
+      "no-console": "off",
+      "no-underscore-dangle": "off",
+      "linebreak-style": 0
+    }
 }
