@@ -4,9 +4,8 @@ node_modules
 coverage
 dist
 assets
-src/js/env.js
-src/js/env 
-env.js 
-env
+keys.js 
 .data
 src/js/data/
+build
+/build/

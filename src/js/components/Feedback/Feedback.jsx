@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import Form from './Form';
 
 function Feedback() {
@@ -27,7 +26,5 @@ function Feedback() {
     </>
   );
 }
-
-Feedback.propTypes = {};
 
 export default Feedback;

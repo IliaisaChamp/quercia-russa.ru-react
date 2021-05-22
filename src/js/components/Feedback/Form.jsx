@@ -12,7 +12,7 @@ function Form() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [isSuccess, setIsSuccess] = useState(null);
   // const [unsuccessfulMessage, setUnsuccessfulMessage] = useState();
-  // const isValidateStatus = (status) => status >= 200 && status < 300;
+  const isValidateStatus = (status) => status >= 200 && status < 300;
 
   const callback = useCallback(async () => {
     const form = document.querySelector('.form');
@@ -26,11 +26,11 @@ function Form() {
       const message = `${name}, ${phone}, ${text}`;
       try {
         await schema.validate({ name: name, phone: phone });
-        // const response = await axios.get(URL + message);
-        // isValidateStatus(response.status)
-        //   ? setisSuccess(true)
-        //   : setisSuccess(false);
-        // form.reset();
+        const response = await axios.get(URL + message);
+        isValidateStatus(response.status)
+          ? setIsSuccess(true)
+          : setIsSuccess(false);
+        form.reset();
         setIsSuccess(true);
       } catch (error) {
         if (error) {

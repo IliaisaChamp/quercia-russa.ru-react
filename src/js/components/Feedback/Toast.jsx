@@ -9,7 +9,6 @@ function Toast({ message, isToast }) {
     <>
       <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 5 }}>
         <div
-          // id="liveToast"
           className={show ? 'toast fade show' : 'toast fadeout hide'}
           role="alert"
           aria-live="assertive"

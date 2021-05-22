@@ -13,7 +13,7 @@ export default function ProductSlider({ images, path }) {
           style={{ height: 550 + 'px' }}
         >
           <img
-            src={'/img/inzhenernaya-doska/' + img}
+            src={`/img/${path}/` + img}
             className="d-block w-100 h-100"
             alt="Photo: parquet"
             style={{ objectFit: 'cover' }}
