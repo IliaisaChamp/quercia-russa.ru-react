@@ -15,16 +15,15 @@ function Navigation(props) {
         }
       };
       window.addEventListener('scroll', setMenuBackground, true);
-      return () => {
-        window.removeEventListener('scroll', setMenuBackground, true);
-      };
+      return () => (
+        window.removeEventListener('scroll', setMenuBackground, true)
+      );
     }
   }, [location.pathname]);
 
   return (
     <nav className="navbar navigation navbar-expand-lg navbar-light fixed-top bg-mobile">
       <div className="container">
-        <a className="navbar-brand" href="#"></a>
         <button
           className="navbar-toggler border-dark"
           type="button"
@@ -34,15 +33,10 @@ function Navigation(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a
-              className="nav-link navigation-link active"
-              aria-current="page"
-              href="#"
-            ></a>
             <a className="nav-link navigation-link text-white" href="#services">
               Сервис
             </a>

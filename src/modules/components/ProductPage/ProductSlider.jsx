@@ -30,11 +30,11 @@ export default function ProductSlider({ images, path }) {
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" style={{ height: 550 + 'px' }}>
+          <div className="carousel-item active" style={{ height: `${550}px` }}>
             <img
               src={`/img/${path}/${images[0]}`}
               className="d-block w-100 h-100"
-              alt="Photo: parquet"
+              alt="parquet"
               style={{ objectFit: 'cover' }}
             />
           </div>

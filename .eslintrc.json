@@ -15,12 +15,6 @@
   "rules": {
     "import/no-extraneous-dependencies": [
       "error",
-      {
-        "devDependencies": false,
-        "optionalDependencies": false,
-        "peerDependencies": false,
-        "packageDir": "./"
-      }
     ],
     "no-use-before-define": "off",
     "max-len": ["warn", { "code": 140 }],

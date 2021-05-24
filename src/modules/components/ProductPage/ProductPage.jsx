@@ -1,12 +1,10 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import ProductSlider from './ProductSlider';
 import ProductInfo from './ProductInfo';
 import BackButton from './BackButton';
 import Footer from '../Footer';
 import Feedback from '../Feedback/Feedback';
-import Spinner from './Spinner';
 
 const ProductSlider = React.lazy(() => import('./ProductSlider'));
 
