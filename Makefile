@@ -1,8 +1,8 @@
 develop:
-	webpack serve -c config/webpack/dev.js
+	npm run start
 
 build:
-	 webpack -c config/webpack/prod.js
+	 npm run build
 
 test:
 	npm test --experimental-vm-modules

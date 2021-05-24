@@ -1,0 +1,4 @@
+export default {
+  TELEGRAM_KEY: 'TELEGRAM_KEY',
+  TELEGRAM_CHAT_ID: 'TELEGRAM_CHAT_ID',
+};

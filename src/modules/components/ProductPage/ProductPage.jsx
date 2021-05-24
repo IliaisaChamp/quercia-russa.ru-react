@@ -41,6 +41,9 @@ export default function ProductPage({ data }) {
               <ProductInfo data={productData} />
             </div>
           </div>
+          {/* <div className="row pt-5 pb-5">
+            <div className="col-lg-8 mx-auto text-center"></div>  
+          </div>   */}
           <BackButton />
         </div>
       </section>

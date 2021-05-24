@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import schema from './validate';
 import SuccessMessage from './SuccessMessage';
 import Toast from './Toast';
-import keys from '../../keys';
+import keys from '../../../keys/keys.dev';
 
 const URL = `https://api.telegram.org/bot${keys.TELEGRAM_KEY}/sendMessage?chat_id=${keys.TELEGRAM_CHAT_ID}&text=`;
 function Form() {
@@ -25,8 +24,9 @@ function Form() {
       const text = fomData.get('text');
       const message = `${name}, ${phone}, ${text}`;
       try {
-        await schema.validate({ name: name, phone: phone });
+        await schema.validate({ name, phone });
         const response = await axios.get(URL + message);
+        // eslint-disable-next-line no-unused-expressions
         isValidateStatus(response.status)
           ? setIsSuccess(true)
           : setIsSuccess(false);
@@ -51,7 +51,7 @@ function Form() {
         <SuccessMessage />
       ) : (
         <form action="" className="form">
-          <div className="mb-4" style={{ height: 50 + 'px' }}>
+          <div className="mb-4" style={{ height: `${50}px` }}>
             <input
               name="name"
               type="text"
@@ -59,7 +59,7 @@ function Form() {
               placeholder="Ваше имя"
             />
           </div>
-          <div className="mb-4" style={{ height: 50 + 'px' }}>
+          <div className="mb-4" style={{ height: `${50}px` }}>
             <input
               name="phone"
               type="tel"
@@ -74,12 +74,14 @@ function Form() {
               rows="5"
               name="text"
               placeholder="Сообщение"
-            ></textarea>
+            />
           </div>
           <div className="mb-3">
             <button
               type="submit"
-              className="btn w-100 btn-success mb-3 form-button rounded-0"
+              className="btn w-100 btn-success mb-3 form-button rounded-0 text-uppercase"
+              // eslint-disable-next-line no-undef
+              onClick={ym(77799958, 'reachGoal', 'zayvka_konsultacia')}
             >
               Отправить
             </button>
@@ -90,9 +92,5 @@ function Form() {
     </>
   );
 }
-
-Form.propTypes = {
-  updateToast: PropTypes.func,
-};
 
 export default Form;

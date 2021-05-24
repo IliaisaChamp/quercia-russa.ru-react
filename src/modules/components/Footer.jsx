@@ -50,13 +50,13 @@ export default function Footer() {
                 <h5 className="card-title text-white">Телефоны:</h5>
                 <div className="line mx-auto"></div>
                 <p className="card-text fs-6 footer-card__text ">
-                  <a href="tel:79160661932">+7 916 066-19-32</a>
+                  <a href="tel:+79160661932">+7 916 066-19-32</a>
                 </p>
                 <p className="card-text fs-6 footer-card__text ">
-                  <a href="tel:79160661932">+7 905 577-81-71</a>
+                  <a href="tel:+79055778171">+7 905 577-81-71</a>
                 </p>
                 <p className="card-text fs-6 footer-card__text ">
-                  <a href="tel:79162865998">+7 916 286-59-98</a>
+                  <a href="tel:+79162865998">+7 916 286-59-98</a>
                 </p>
                 <p className="card-text fs-6 footer-card__text ">
                   <a href="#">quercia-russa@mail.ru</a>

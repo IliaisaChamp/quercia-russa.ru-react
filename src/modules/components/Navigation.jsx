@@ -8,7 +8,7 @@ function Navigation(props) {
     if (location.pathname === '/') {
       const setMenuBackground = () => {
         const navigation = document.querySelector('.navigation');
-        if (pageYOffset > 500) {
+        if (window.pageYOffset > 500) {
           navigation.classList.add('bg-scroll');
         } else {
           navigation.classList.remove('bg-scroll');

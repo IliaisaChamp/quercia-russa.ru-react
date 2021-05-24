@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import emojiSmile from '../../../assets/icons/emoji-smile.svg';
 
 export default function SuccessMessage() {
   const [isLoading, setIsLoading] = useState(null);
@@ -31,8 +32,8 @@ export default function SuccessMessage() {
                 насколько это возможно
               </p>
               <img
-                src="/img/icons/emoji-smile.svg"
-                alt="smile"
+                src={emojiSmile}
+                alt="emoji: smile"
                 style={{ width: 4 + 'rem' }}
               />
             </>

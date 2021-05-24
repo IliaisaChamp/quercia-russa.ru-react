@@ -10,7 +10,7 @@ export default function ProductInfo({ data }) {
       <ul className="nav nav-tabs flex-nowrap mb-2" id="myTab" role="tablist">
         <li className="nav-item w-50" role="presentation">
           <button
-            className="nav-link active w-100 border"
+            className="nav-link active w-100 border text-dark"
             id="home-tab"
             data-bs-toggle="tab"
             data-bs-target="#home"
@@ -24,7 +24,7 @@ export default function ProductInfo({ data }) {
         </li>
         <li className="nav-item w-50" role="presentation">
           <button
-            className="nav-link w-100 border"
+            className="nav-link w-100 border text-dark"
             id="profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#profile"

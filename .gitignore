@@ -4,7 +4,7 @@ node_modules
 coverage
 dist
 assets
-keys.js 
+keys.dev.js
 .data
 src/js/data/
 build

@@ -1,3 +1,4 @@
+import React from 'react';
 import Navigation from './Navigation';
 
 export default function Header() {
@@ -15,6 +16,8 @@ export default function Header() {
               className="btn btn-success btn-lg mt-auto text-uppercase header-button rounded-0"
               href="#feedback"
               role="button"
+              // eslint-disable-next-line no-undef
+              onClick={ym(77799958, 'reachGoal', 'poluchit_konsultaciu')}
             >
               расчитать стоимость бесплатно
             </a>

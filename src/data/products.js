@@ -4,25 +4,25 @@ export default {
     {
       title: 'Инженерная доска',
       preview: './img/card_1.jpg',
-      price: 3700,
+      price: 3900,
       link: 'inzhenernaya-doska',
     },
     {
       title: 'Массивная доска',
       preview: './img/card_2.jpg',
-      price: 4500,
+      price: 4700,
       link: 'massivnaya-doska',
     },
     {
       title: 'Елка Французская',
       preview: './img/card_3.jpg',
-      price: 4500,
+      price: 4700,
       link: 'elka-francuzskaya',
     },
     {
       title: 'Елка Английская',
       preview: './img/card_4.jpg',
-      price: 4000,
+      price: 4300,
       link: 'elka-anglijskaya',
     },
     {
@@ -64,6 +64,7 @@ export default {
   ],
   products: {
     'inzhenernaya-doska': {
+      price: 3900,
       title: 'Инженерная доска',
       info: {
         Производство: 'Россия',

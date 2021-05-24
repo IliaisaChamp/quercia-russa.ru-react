@@ -6,8 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
-const Dotenv = require('dotenv-webpack');
-
 const babelLoader = {
   loader: 'babel-loader',
   options: {
@@ -114,8 +112,8 @@ module.exports = {
       React: 'react',
     }),
 
-    new Dotenv({
-      path: './config/.env',
-    }),
+    // new Dotenv({
+    //   path: './config/.env',
+    // }),
   ],
 };

@@ -81,7 +81,10 @@ a:hover {
 .footer {
   background-color: #212121
 }
-
+.card-title {
+font-family: "Oswald", sans-serif;
+font-weight: 300
+}
 .footer-card__text {
   color: #16ffbd;
 }
@@ -150,7 +153,7 @@ a:hover {
 }
 
 .fade {
-  animation: fadeIn 1s linear;
+  animation: fadeIn .5s linear;
 }
 
 @keyframes fadeIn {
@@ -162,4 +165,15 @@ a:hover {
     opacity: 1
   }
 
+}
+
+.card-img-top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
 }
