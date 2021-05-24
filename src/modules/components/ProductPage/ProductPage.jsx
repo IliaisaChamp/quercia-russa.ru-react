@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ProductSlider from './ProductSlider';
+// import ProductSlider from './ProductSlider';
 import ProductInfo from './ProductInfo';
 import BackButton from './BackButton';
 import Footer from '../Footer';
 import Feedback from '../Feedback/Feedback';
+import Spinner from './Spinner';
+
+const ProductSlider = React.lazy(() => import('./ProductSlider'));
 
 export default function ProductPage({ data }) {
   const { products } = data;
-  let { productURL } = useParams();
+  const { productURL } = useParams();
   const [productData, setProductData] = useState({});
   const [sliderData, setSliderData] = useState([]);
   const [title, setTitle] = useState('');
@@ -26,7 +29,7 @@ export default function ProductPage({ data }) {
     <>
       <section className="product">
         <div className="container">
-          <div className="row py-5">
+          <div className="row py-3">
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="text-black mb-4 title-sized text-uppercase">
                 {title}
@@ -35,14 +38,20 @@ export default function ProductPage({ data }) {
           </div>
           <div className="row pb-5">
             <div className="col-md-7 pb-3">
-              <ProductSlider images={sliderData} path={productURL} />
+              <Suspense
+                fallback={
+                  <div className="spinner-grow text-light" role="status" />
+                }
+              >
+                <ProductSlider images={sliderData} path={productURL} />
+              </Suspense>
             </div>
             <div className="col-md-5">
               <ProductInfo data={productData} />
             </div>
           </div>
           {/* <div className="row pt-5 pb-5">
-            <div className="col-lg-8 mx-auto text-center"></div>  
+            <div className="col-lg-8 mx-auto text-center"></div>
           </div>   */}
           <BackButton />
         </div>

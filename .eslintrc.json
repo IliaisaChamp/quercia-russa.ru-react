@@ -19,8 +19,7 @@
         "devDependencies": false,
         "optionalDependencies": false,
         "peerDependencies": false,
-        "packageDir": "./",
-        "treatUndefinedAsUnspecified": false
+        "packageDir": "./"
       }
     ],
     "no-use-before-define": "off",

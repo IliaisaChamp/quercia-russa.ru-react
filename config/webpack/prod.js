@@ -41,22 +41,11 @@ module.exports = merge(common, {
       chunkFilename: '[id].css',
     }),
     new ImageMinimizerPlugin({
+      include: /\.(jpe?g|png)$/i,
+      deleteOriginalAssets: true,
+      filename: '[path][name].webp',
       minimizerOptions: {
-        plugins: [
-          ['gifsicle', { interlaced: true }],
-          ['jpegtran', { progressive: true }],
-          ['optipng', { optimizationLevel: 5 }],
-          [
-            'svgo',
-            {
-              plugins: [
-                {
-                  removeViewBox: false,
-                },
-              ],
-            },
-          ],
-        ],
+        plugins: ['imagemin-webp'],
       },
     }),
   ],

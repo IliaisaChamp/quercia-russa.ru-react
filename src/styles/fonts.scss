@@ -2,39 +2,19 @@
   font-family: "Oswald";
   src: url("/src/assets/fonts/Oswald-ExtraLight.woff2") format("woff2");
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
-
   font-family: "Oswald";
   src: url("/src/assets/fonts/Oswald-Light.woff2") format("woff2");
   font-weight: 300;
+  font-display: swap;
 }
 
-// @font-face {
-
-//   font-family: "Oswald";
-//   src: url("/src/assets/fonts/Oswald-Medium.woff2") format("woff2");
-//   font-weight: 500;
-// }
-
-// @font-face {
-
-//   font-family: "Oswald";
-//   src: url("/src/assets/fonts/Oswald-Regular.woff2") format("woff2");
-//   font-weight: 400;
-// }
-
-// @font-face {
-
-//   font-family: "Oswald";
-//   src: url("/src/assets/fonts/Oswald-SemiBold.woff2") format("woff2");
-//   font-weight: 600;
-// }
-
 @font-face {
-
   font-family: "Oswald";
   src: url("/src/assets/fonts/Oswald-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }

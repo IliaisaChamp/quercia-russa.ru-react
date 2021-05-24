@@ -80,8 +80,6 @@ function Form() {
             <button
               type="submit"
               className="btn w-100 btn-success mb-3 form-button rounded-0 text-uppercase"
-              // eslint-disable-next-line no-undef
-              onClick={ym(77799958, 'reachGoal', 'zayvka_konsultacia')}
             >
               Отправить
             </button>
