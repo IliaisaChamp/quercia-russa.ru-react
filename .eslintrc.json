@@ -13,9 +13,7 @@
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-    ],
+    "import/no-extraneous-dependencies": ["error", {"dependencies": true}],
     "no-use-before-define": "off",
     "max-len": ["warn", { "code": 140 }],
     "no-console": "off",

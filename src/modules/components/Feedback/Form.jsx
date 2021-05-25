@@ -80,6 +80,7 @@ function Form() {
             <button
               type="submit"
               className="btn w-100 btn-success mb-3 form-button rounded-0 text-uppercase"
+              onClick={ym(77799958, 'reachGoal', 'zayvka_konsultacia')}
             >
               Отправить
             </button>

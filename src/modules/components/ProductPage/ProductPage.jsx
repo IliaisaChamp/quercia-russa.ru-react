@@ -5,6 +5,7 @@ import ProductInfo from './ProductInfo';
 import BackButton from './BackButton';
 import Footer from '../Footer';
 import Feedback from '../Feedback/Feedback';
+import Spinner from '../Spinner';
 
 const ProductSlider = React.lazy(() => import('./ProductSlider'));
 
@@ -35,12 +36,8 @@ export default function ProductPage({ data }) {
             </div>
           </div>
           <div className="row pb-5">
-            <div className="col-md-7 pb-3">
-              <Suspense
-                fallback={
-                  <div className="spinner-grow text-light" role="status" />
-                }
-              >
+            <div className="col-md-7 pb-3" style={{height: `${560}px`}}>
+              <Suspense fallback={<Spinner />}>
                 <ProductSlider images={sliderData} path={productURL} />
               </Suspense>
             </div>
@@ -48,9 +45,6 @@ export default function ProductPage({ data }) {
               <ProductInfo data={productData} />
             </div>
           </div>
-          {/* <div className="row pt-5 pb-5">
-            <div className="col-lg-8 mx-auto text-center"></div>
-          </div>   */}
           <BackButton />
         </div>
       </section>

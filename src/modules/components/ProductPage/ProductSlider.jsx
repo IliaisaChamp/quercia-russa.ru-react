@@ -22,6 +22,7 @@ export default function ProductSlider({ images, path }) {
       );
     });
   };
+  
   return (
     <>
       <div

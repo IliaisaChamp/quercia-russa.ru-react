@@ -5,7 +5,7 @@ export default function Footer() {
     <>
       <footer className="footer" id="contacts">
         <div className="container">
-          <div className="row p-5">
+          <div className="row pt-5">
             <div className="col-lg-8 mx-auto text-center">
               <h2 className="text-black mb-4 title-sized text-uppercase text-white">
                 контакты

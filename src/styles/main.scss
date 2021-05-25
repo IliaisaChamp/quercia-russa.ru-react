@@ -1,5 +1,5 @@
 .container {
-  position: relative
+  position: relative;
 }
 
 a {
@@ -8,22 +8,21 @@ a {
 }
 
 a:hover {
-  color: #ffffff
+  color: #ffffff;
 }
 
 .btn-success {
-  background: linear-gradient(45deg, #49C628, #00c06d);
+  background: linear-gradient(45deg, #49c628, #00c06d);
   border-color: #00c06d;
   font-weight: 300;
   font-size: 1.25rem;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   color: #ffffff;
   transition: background 2s ease-in-out;
 }
 
 .btn-success:hover {
-
-  background: linear-gradient(225deg, #49C628, #00c06d);
+  background: linear-gradient(225deg, #49c628, #00c06d);
   border-color: #00c06d;
   background-position: left center;
 }
@@ -33,14 +32,19 @@ a:hover {
 }
 
 .header {
-  font-family: "Oswald", sans-serif;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 75%, #000000 100%), url(/src/assets/images/main.webp);
+  font-family: 'Oswald', sans-serif;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.4) 75%,
+      #000000 100%
+    ),
+    url(/src/assets/images/main.webp);
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   color: #ffffff;
-
 }
 
 .header-title {
@@ -51,18 +55,17 @@ a:hover {
 
 .header-subtitle {
   font-weight: 200;
-  font-size: calc(.45rem + 1.5vw);
-  letter-spacing: .4rem;
+  font-size: calc(0.45rem + 1.5vw);
+  letter-spacing: 0.4rem;
 }
 
 .header-button {
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   padding: 1.25rem 2rem;
 }
 
 .title-sized {
-
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: calc(3rem + 2.5vw);
 }
 
@@ -74,16 +77,16 @@ a:hover {
 
   &-img {
     object-fit: contain;
-    height: 100%
+    height: 100%;
   }
 }
 
 .footer {
-  background-color: #212121
+  background-color: #212121;
 }
 .card-title {
-font-family: "Oswald", sans-serif;
-font-weight: 300
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
 .footer-card__text {
   color: #16ffbd;
@@ -94,7 +97,6 @@ font-weight: 300
   height: 0.25rem;
   width: 5rem;
   background-color: #16ffbd;
-
 }
 
 .form-control {
@@ -105,11 +107,10 @@ font-weight: 300
 .form-control:focus {
   box-shadow: 0 0 0 0.15rem #00c06d;
   border-color: none;
-
 }
 
-.form-control[type="text"],
-.form-control[type="tel"] {
+.form-control[type='text'],
+.form-control[type='tel'] {
   height: 100%;
 }
 
@@ -118,32 +119,25 @@ font-weight: 300
   font-size: 2rem;
   height: 60px;
   font-weight: 500;
-
 }
 
 .textarea {
   resize: none;
 }
+.nav-link {
+  color: #000000;
+  &:hover {
+    color: #000000;
+  }
+}
 
 .nav-tabs .nav-link.active {
   color: #ffffff;
   background-color: #00c06d;
-
-}
-
-.button-back {
-  cursor: pointer;
-  position: fixed;
-  bottom: 18px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  z-index: 999;
-
 }
 
 .bg-scroll {
-  background-color: rgba(33, 33, 33, .5);
+  background-color: rgba(33, 33, 33, 0.5);
 }
 
 .carousel-control-prev-icon,
@@ -153,18 +147,17 @@ font-weight: 300
 }
 
 .fade {
-  animation: fadeIn .5s linear;
+  animation: fadeIn 0.5s linear;
 }
 
 @keyframes fadeIn {
   0% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
-
 }
 
 .card-img-top:after {

@@ -16,6 +16,7 @@ export default function Header() {
               className="btn btn-success btn-lg mt-auto text-uppercase header-button rounded-0"
               href="#feedback"
               role="button"
+              onClick={ym(77799958, 'reachGoal', 'poluchit_konsultaciu')}
             >
               расчитать стоимость бесплатно
             </a>

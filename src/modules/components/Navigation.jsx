@@ -14,10 +14,12 @@ function Navigation(props) {
           navigation.classList.remove('bg-scroll');
         }
       };
-      window.addEventListener('scroll', setMenuBackground, true);
-      return () => (
-        window.removeEventListener('scroll', setMenuBackground, true)
-      );
+      window.addEventListener('scroll', setMenuBackground);
+      return () =>
+        window.removeEventListener('scroll', setMenuBackground);
+    } else if (location.pathname !== '/') {
+      return () =>
+        window.removeEventListener('scroll', setMenuBackground);
     }
   }, [location.pathname]);
 

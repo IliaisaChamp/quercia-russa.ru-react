@@ -25,7 +25,7 @@ function Services({ services }) {
               сервис
             </h2>
           </div>
-          <div className="row pt-5 pb-5 text-center">
+          <div className="row pt-5 text-center">
             {mappingServices(services)}
           </div>
         </div>
